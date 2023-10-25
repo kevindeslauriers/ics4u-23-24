@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    <section class="section">
+    <!-- <section class="section">
         <div class="container">
             <div class="dropdown is-active">
                 <div class="dropdown-trigger">
@@ -26,7 +26,7 @@
                 </div>
               </div>
         </div>
-    </section>
+    </section> -->
 
     <table id="standings" class="table">
         <thead>
@@ -53,9 +53,7 @@
     function updateStandings(teamArr){
         const tbody = document.querySelector('tbody')
         
-        for (let index = 0; index < teamArr.length; index++) {
-            const team = teamArr[index];
-            
+        teamArr.forEach(team => {
             let tr = document.createElement('tr')
             
             let td = document.createElement('td')
@@ -75,7 +73,9 @@
             tr.appendChild(td)
 
             tbody.append(tr)
-        }
+        })
+
+      
     }
 
     function updateDropDown(teamArr){
@@ -95,7 +95,7 @@
     }
 
 
-    updateDropDown(teams)
+    //updateDropDown(teams)
     updateStandings(teams)
     
 </script>
