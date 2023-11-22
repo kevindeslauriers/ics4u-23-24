@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Validation</title>
+</head>
+<body>
+  <form>
+    <label for="patternInput">Enter the pattern (e.g., 55:66.8):</label>
+    <input type="text" id="patternInput" name="patternInput" required pattern="\d{2}:\d{2}\.\d" title="Please use the format 55:66.8">
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
